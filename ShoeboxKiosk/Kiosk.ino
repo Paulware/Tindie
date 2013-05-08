@@ -3,7 +3,7 @@
 #include <SPI.h>
 #include <Wire.h>
 #include <ArduinoNunchuk.h>
-
+#include <MemoryFree.h>
 
 #define TWENTYXFOUR
 #ifdef TWENTYXFOUR
@@ -108,7 +108,8 @@ void setup()
 {
   Serial.begin (115200);
   nunchuk.init();
-
+  Serial.print ( "RAM free: " );
+  Serial.println ( freeMemory() );
   delay(10);
   lcd.begin(COLUMNS, ROWS); // Specify how many columns and rows in the LCD unit
   delay(10);
