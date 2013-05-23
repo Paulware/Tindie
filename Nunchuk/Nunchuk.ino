@@ -10,7 +10,8 @@
 #include <Wire.h>
 #include <ArduinoNunchuk.h>
 
-#define BAUDRATE 19200
+#define BAUDRATE 115200
+unsigned long timeout = 0;
 
 ArduinoNunchuk nunchuk = ArduinoNunchuk();
 
@@ -27,30 +28,34 @@ void setup()
 
 void loop()
 {
-  nunchuk.update();
+  if (millis() > timeout)
+  {
+    timeout = millis() + 100;
+    nunchuk.update();
 
-  Serial.print(nunchuk.analogX, DEC);
-  Serial.print(' ');
-  Serial.print(nunchuk.analogY, DEC);
-  Serial.print(' ');
-  Serial.print(nunchuk.accelX, DEC);
-  Serial.print(' ');
-  Serial.print(nunchuk.accelY, DEC);
-  Serial.print(' ');
-  Serial.print(nunchuk.accelZ, DEC);
-  Serial.print(' ');
-  Serial.print(nunchuk.zButton, DEC);
-  if (nunchuk.zButton)
-    digitalWrite (4,0);
-  else
-    digitalWrite (4,1);
+    Serial.print(nunchuk.analogX, DEC);
+    Serial.print(' ');
+    Serial.print(nunchuk.analogY, DEC);
+    Serial.print(' ');
+    Serial.print(nunchuk.accelX, DEC);
+    Serial.print(' ');
+    Serial.print(nunchuk.accelY, DEC);
+    Serial.print(' ');
+    Serial.print(nunchuk.accelZ, DEC);
+    Serial.print(' ');
+    Serial.print(nunchuk.zButton, DEC);
+    if (nunchuk.zButton)
+      digitalWrite (4,0);
+    else
+      digitalWrite (4,1);
     
-  if (nunchuk.cButton)
-    digitalWrite ( 6,0);
-  else
-    digitalWrite ( 6,1); 
+    if (nunchuk.cButton)
+      digitalWrite ( 6,0);
+    else
+      digitalWrite ( 6,1); 
     
   
-  Serial.print(' ');
-  Serial.println(nunchuk.cButton, DEC);
+    Serial.print(' ');
+    Serial.println(nunchuk.cButton, DEC);
+  }  
 }

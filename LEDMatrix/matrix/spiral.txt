@@ -1,0 +1,51 @@
+void spiral ()
+{
+  static int state = 0;
+  static int level = 0;
+  if ((x==0) && (y == 0))
+    setDot (3,3,false);
+  else
+    setDot (x,y,false);
+  
+  switch (state )
+  {
+    case 0: // Left to right outer 
+      x++;
+      setDot (x,y,true);
+      if ((x+level) == 7) // last one 
+        state = 1;
+    break;
+    case 1: // Top to bottom 
+      y++;
+      setDot (x,y,true);
+      if ((y+level)==7)
+        state = 2;
+    break;
+    case 2: // Right to left 
+      x--;
+      setDot (x,y,true);
+      if ((x-level)==0)
+        state = 3;
+      
+    break;
+    case 3: // Bottom to top
+      y--;
+      setDot (x,y,true);
+      if ((y-level-1)<=0)
+      {
+        state = 0;
+        level++;
+        if (level == 4) 
+        {
+          setDot (x,y,false);
+          x = 0;
+          y = 0;
+          level = 0;
+        }  
+      }
+    break; 
+  }
+  delay (20);
+}
+
+
