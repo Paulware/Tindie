@@ -5,4 +5,6 @@ Simply open the Arduino IDE, select the type of bootloader you wish to load (atm
 , Select Tools->Programmer->Arduino as ISP and 
 Select Tools->Burn Bootloader.
 
-The windows 7/8 driver for this cp2102 usb to serial device can be found <a href="http://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip">here</a>
+To view a video showing proper operation click <a href="http://youtu.be/JTGEk-1ROrI">here</a><br>
+The windows 7 and windows 8 driver for the cp2102 usb to serial device can be found <br>
+  <a href="http://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip">here</a>

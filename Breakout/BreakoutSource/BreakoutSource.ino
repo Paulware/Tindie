@@ -11,6 +11,7 @@ int width = 2;
 int showNow = 0;
 bool ballMissed = true;
 int ballCount = 0;
+unsigned long speedTimeout = 500;
 
 // Ball offsets
 int xOffset = 1;
@@ -247,7 +248,7 @@ void updateBall ()
     if ((ballY == 0) || (ballY == 7))
       yOffset = 0 - yOffset;  
     
-    ballTime = millis() + 500;
+    ballTime = millis() + speedTimeout;
   }
   
 }
@@ -276,12 +277,13 @@ void collision (bool & left, bool & right, bool & center, bool & miss)
   ballMissed = miss;  
 }
 
-void getNunchuk (bool & left, bool & right, bool & startOver)
+void getNunchuk (bool & left, bool & right, bool & startOver, bool & goFaster)
 {
   static unsigned long nunchukTimeout = 0;
   left = false;
   right = false;
   startOver = false;
+  goFaster = false;
   if (millis() > nunchukTimeout)
   {
     nunchuk.update(); 
@@ -292,6 +294,8 @@ void getNunchuk (bool & left, bool & right, bool & startOver)
       right = true;
     if (nunchuk.zButton)
       startOver = true;  
+    else if (nunchuk.cButton)
+      goFaster = true;  
   }   
 }
 
@@ -307,10 +311,16 @@ void loop()
   bool goLeft;
   bool goRight;
   bool startOver;
+  bool goFaster;
   char ch;
   
-  getNunchuk (goLeft, goRight, startOver);
-  if (startOver)
+  getNunchuk (goLeft, goRight, startOver, goFaster);
+  if (goFaster)
+  {
+    if (speedTimeout > 100)
+      speedTimeout = speedTimeout - 100;
+  }
+  else if (startOver)
   {
     gameOver = false;
     ballMissed = false;
@@ -325,6 +335,8 @@ void loop()
     matrix [5] = 0;
     matrix [6] = 0;
     matrix [7] = 0;
+    showPaddle (2,p);  
+    speedTimeout = 500;  
   }
   if (gameOver)
   {
