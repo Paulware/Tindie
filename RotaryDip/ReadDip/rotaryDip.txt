@@ -1,0 +1,27 @@
+EECO 10 position rotary DIP switch
+Package: 6 pin DIP, 0.100" centers, 0.300" width
+    +--v--+
+1 [1|     |6] 8
+    |  ^  |
+C [2|  O  |5] C
+    |     |
+4 [3|     |4] 2
+    +-----+
+Outputs:
+Position  1   2   4   8
+________ ___ ___ ___ ___
+    0     -   -   -   -
+    1     x   -   -   -
+    2     -   x   -   -
+    3     x   x   -   -
+    4     -   -   y   -
+    5     x   -   y   -
+    6     -   x   y   -
+    7     x   x   y   -
+    8     -   -   -   y
+    9     x   -   -   y
+Legend:
+  - no connection
+  x connected to pin 2
+  y connected to pin 5
+  The two common connections (pins 2 and 5) are not internally connected
