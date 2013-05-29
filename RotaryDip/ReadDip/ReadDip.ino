@@ -10,7 +10,7 @@ void setup()
   Serial.println ( "Rotary Dip ready Slave Address = 6" );
   for (int i=HIPIN; i>(LOWPIN-1); i--)
   {
-    pinMode (i, OUTPUT);
+    pinMode (i, INPUT);
     digitalWrite(i,1); // set pull-up resistor
     Serial.print ( " pin " );
     Serial.print ( i );
