@@ -3,7 +3,7 @@
 unsigned long timeout = 0;
 void setup()
 {
-  Serial.begin(115200);  // start serial for output
+  Serial.begin(9600);  // start serial for output
   Serial.println ( "Master Ready" );
   Wire.begin();         // join i2c bus (address optional for master)
   timeout = millis () + 500;
