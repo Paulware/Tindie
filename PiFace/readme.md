@@ -17,6 +17,7 @@ Here are some pi basics:
   <li>When the pi boots up it will send you an email saying what ip address it is at.  This is a useful backup/alternate to no-ip.com</li>
   <li>To see your web-page from outside you will need to configure your router to port-forward port 80 from your raspberry pi.</li>  
   <li>To transfer a file from windows to the pi, you can insert the sd card into your pc and copy the file to the /boot directory.  When you place the sd card in the pi you will be able to access the file</li>
+  <li>The pi is configured to run headless (without screen).  You will need the free vnc viewer from <a href="http://www.tightvnc.com/download.php">here</a></li>
 </ul>
 
 Here are some web-page basics:
