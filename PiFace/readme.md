@@ -18,6 +18,10 @@ Here are some pi basics:
   <li>To see your web-page from outside you will need to configure your router to port-forward port 80 from your raspberry pi.</li>  
   <li>To transfer a file from windows to the pi, you can insert the sd card into your pc and copy the file to the /boot directory.  When you place the sd card in the pi you will be able to access the file</li>
   <li>The pi is configured to run headless (without screen).  You will need the free vnc viewer from <a href="http://www.tightvnc.com/download.php">here</a></li>
+  <li>To login via ssh, you can use the free windows application: putty.  The username is pi and password is raspberry</li>
+  <li>To change the password for ssh, use: sudo raspi-config and select "change user password"</li> 
+  <li>Files can be transferred very winscp: <a href="http://winscp.net/eng/index.php">http://winscp.net/eng/index.php</a></li>
+  <li>Alternately you can read/write to the /boot directory from your laptop by placing the sd card in a usb reader or slot</li>
 </ul>
 
 Here are some web-page basics:
@@ -27,6 +31,11 @@ Here are some web-page basics:
   <li>Javascript is used to call invoke the cgi-bin files</li>
   <li>You can create a button like use: input type=button onclick="jfunction()" value="text" </li>
   <li>Use this javascript command to invoke a cgi-bin file: document.location="cgi-bin/filename.cgi";</li>
+</ul>
+
+Here are some pi-face basics:
+<ul>
+  <li>Excellent online tutorial: <a href="http://www.startpi.co.uk/getting-started-with-pi-face.html">http://www.startpi.co.uk/getting-started-with-pi-face.html</a></li>
 </ul>
 
 
