@@ -20,7 +20,7 @@ Here are some pi basics:
   <li>The pi is configured to run headless (without screen).  You will need the free vnc viewer from <a href="http://www.tightvnc.com/download.php">here</a></li>
   <li>To login via ssh, you can use the free windows application: putty.  The username is pi and password is raspberry</li>
   <li>To change the password for ssh, use: sudo raspi-config and select "change user password"</li> 
-  <li>Files can be transferred very winscp: <a href="http://winscp.net/eng/index.php">http://winscp.net/eng/index.php</a></li>
+  <li>Files can be transferred between pc and raspberry pi using winscp: <a href="http://winscp.net/eng/index.php">http://winscp.net/eng/index.php</a></li>
   <li>Alternately you can read/write to the /boot directory from your laptop by placing the sd card in a usb reader or slot</li>
 </ul>
 
