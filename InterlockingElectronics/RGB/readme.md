@@ -36,9 +36,9 @@ Note: If you are using Windows 8 you may need to allow unsigned drivers (Advance
 
 <li>Enable USB debugging on your Android device.  This is usually in the settings, developer options</li>
 <li>Turn on Bluetooth.  This is in settings, Wireless and network.</li>
-<li>Download the Android Elipse java project from github located at: .Extract the files to your Eclipse Android workspace directory.  Import the project to eclipse.  Run the program it will ask you for an android device.  Select your Android device for upload.</li>
-<li>Download the Arduino .ino file from github located at: <br>
-    In the Arduino IDE, select Tools, Board, Arduino Pro or Pro Mini (5V 16mhz) w/Atmega328.  Select the correct Com port.  Upload the .inp file to the Interlocking Electronics Master I2C module using the usb programmer.  The windows usb driver for the programmer is located <a href="http://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip">here</a>. 
+<li>Download the Android Elipse java project from github located at: <a href="https://github.com/Paulware/Tindie/tree/master/InterlockingElectronics/RGB">https://github.com/Paulware/Tindie/tree/master/InterlockingElectronics/RGB</a>. Extract the files to your Eclipse Android workspace directory.  Import the project to eclipse.  Run the program it will ask you for an android device.  Select your Android device for upload.</li>
+<li>Download the Arduino .ino file from github also located at: <a href="https://github.com/Paulware/Tindie/tree/master/InterlockingElectronics/RGB">https://github.com/Paulware/Tindie/tree/master/InterlockingElectronics/RGB</a><br>
+    In the Arduino IDE, select Tools, Board, Arduino Pro or Pro Mini (5V 16mhz) w/Atmega328.  Select the correct Com port.  Upload the .ino file to the Interlocking Electronics Master I2C module using the usb programmer.  The windows usb driver for the programmer is located <a href="http://www.silabs.com/Support%20Documents/Software/CP210x_VCP_Windows.zip">here</a>. 
 <li>Run the BluetoothTest Android Program
    <ol>
    <li>Press "Search new Devices/Cancel" button</li>
