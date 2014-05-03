@@ -53,3 +53,5 @@ Note: If you are using Windows 8 you may need to allow unsigned drivers (Advance
 
 </li>
 </ol>
+
+Video: <a href="https://www.youtube.com/watch?v=WPH_DAv0iuA&feature=youtu.be">here</a>
