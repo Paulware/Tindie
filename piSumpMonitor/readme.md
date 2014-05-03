@@ -20,4 +20,10 @@
     <li>A pcb that snaps to the raspberry pi containing the water sensor</li>
     <li>My support to get you running if you have any questions: paulware@hotmail.com</li>
     </li>
+    
+  In this repo:
+    <ul>
+    <li>pi.zip which contains all source code used on the pi</li>
+    <li>Design document (coming soon tbd)</li>
+    </ul>    
   
