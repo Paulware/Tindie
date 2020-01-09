@@ -1,5 +1,4 @@
 <h1>Tindie Products</h1>
 <ul>
-    <li><a href="nrfTransmitter">Nrf Transmitter</a></li>
-	<li>Nrf Receiver</li>
+    <li><a href="nrf24l01">Nrf24l01 products</a></li>
 </ul>
