@@ -1,5 +1,6 @@
 <h1>Nrf24l01 receiver</h1>
 This receiver outputs at 9600 baud.<br>
+<img src="receiver.jpg"><p>
 List of default characters
 <table border="2px solid">
 <tr><th>Character</th><th>Description</th></tr>
